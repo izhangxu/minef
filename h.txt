@@ -29,14 +29,15 @@
 
 #乐居合伙人-2016-09-05
 10.207.0.186   test.admin.house.sina.com.cn
-123.59.190.247   test.partner.leju.com test.m.partner.leju.com test.admin.partner.leju.com admin.partner.leju.com
+123.59.190.247   admin.partner.leju.com test.admin.partner.leju.com test.m.partner.leju.com test.partner.leju.com
 
 #看房团
 58.83.214.228   admin.kft.house.sina.com.cn
-
 #全网搜索-2016-10-13
 #10.207.0.201   sou.leju.com
 123.59.190.249   sou.leju.com
+#122.2.132.42   leju.com
+#1.23.25.2   bai.com cdn1.leju.com k.leju.com
 
 #楼盘
 123.59.190.247   admin.house.bch.leju.com
@@ -46,7 +47,7 @@
 
 
 ##@@##defaultGroup
-122.2.32.42   cdn1.leju.com leju.com
-122.2.32.42   cdn1.leju.com leju.com
-122.2.32.42   cdn.leju.com leju.com
+#122.2.32.42   cdn.leju.com leju.com
+defaultGroup1
+122.2.132.42   cdn1.leju.com leju.com
 ##@@##
