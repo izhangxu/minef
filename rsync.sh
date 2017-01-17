@@ -8,14 +8,15 @@ online_dir=$3
 commit_msg=$4
 iNow=0
 
-# 文件目录转换为数组
-for s in ${files[@]}
-do
-	files[$iNow]=$s
-	iNow=`expr $iNow + 1`
-done
-IFS="$OLD_IFS"
-
+# # 文件目录转换为数组
+# for s in ${files[@]}
+# do
+# 	files[$iNow]=$s
+# 	iNow=`expr $iNow + 1`
+# done
+# IFS="$OLD_IFS"
+echo '待移动文件目录：'
+echo ${files[*]}
 # 检测测试环境当前目录是否存在
 if [ ! -d $test_dir ]
 	then

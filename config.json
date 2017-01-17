@@ -1,1 +1,6 @@
-{"path":{"test":"/Users/zhangxu/Documents/work/cdn/leju_203/cdn.ljimg.com/trunk","online":"/Users/zhangxu/Documents/work/cdn_online/trunk"}}
+{
+	"path": {
+		"test": "/Users/zhangxu/Documents/work/cdn/leju_203/cdn.ljimg.com/trunk",
+		"online": "/Users/zhangxu/Documents/work/cdn_online/trunk"
+	}
+}

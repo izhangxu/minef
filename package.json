@@ -1,14 +1,22 @@
 {
-	"name": "zx",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"bin": {
-		"zx": "bin/zx.js"
-	},
-	"author": "zhangxu",
-	"license": "ISC"
+  "name": "zx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "zx": "bin/zx.js"
+  },
+  "author": "zhangxu",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "cross-spawn": "^5.0.1",
+    "iconv-lite": "^0.4.15",
+    "inquirer": "^2.0.0",
+    "lodash": "^4.17.4",
+    "shelljs": "^0.7.5"
+  }
 }
