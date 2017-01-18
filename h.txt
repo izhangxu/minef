@@ -35,16 +35,22 @@
 #楼盘
 123.59.190.247   admin.house.bch.leju.com
 127.0.0.1   windows10.microdone.cn
-127.0.0.1   cdn.leju.com
+#127.0.0.1   cdn.leju.com
 
 ##@@##defaultGroup2
 #122.2.132.42   cdn1.leju.com leju.com1
 #122.2.132.42   cdn1.leju.com leju.com
 #12.2.132.42   cdn1.l2eju.com le2ju.com
+#12.2.132.42   cdn.leju.com
 ##@@##
 ##@@##defaultGroup3
 #122.2.132.42   cdn1.leju.com leju.com1
 #122.2.132.42   cdn1.leju.com leju.com
 #12.2.132.42   cdn1.l2eju.com le2ju.com
 12.2.132.42   cdn1.l2ej2u.com l2eju.com
+#12.2.132.42   cdn.leju.com
+##@@##
+
+##@@##defaultGroup
+#10.207.0.202   cdn.leju.com
 ##@@##
