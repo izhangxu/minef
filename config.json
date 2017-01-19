@@ -7,6 +7,15 @@
 		"test": [{
 			"domain": "cdn.leju.com",
 			"ip": "10.207.0.202"
+		}, {
+			"domain": "cdn2.leju.com",
+			"ip": "10.207.0.209"
+		}, {
+			"domain": "cdn1.leju.com",
+			"ip": "10.207.0.201"
+		}, {
+			"domain": "cdn3.leju.com",
+			"ip": "10.207.0.203"
 		}]
 	}
 }
