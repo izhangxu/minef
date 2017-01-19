@@ -1,7 +1,7 @@
-const zx = require('./lib/zx.js');
+const mainf = require('./lib/mainf.js');
 
 module.exports = {
 	init: function(argv) {
-		zx.init(argv);
+		mainf.init(argv);
 	}
 }; 
