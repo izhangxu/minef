@@ -40,7 +40,6 @@ for path in $files
 do
 	echo "移动 $path 到 $online_dir"
 	rsync -ravu --delete $path $online_dir
-    #cp -rfu $localTrunk $path $online_dir
 done
 
 echo ""

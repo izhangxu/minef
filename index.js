@@ -1,4 +1,4 @@
-const mainf = require('./lib/mainf.js');
+const mainf = require('./lib/minef.js');
 
 module.exports = {
 	init: function(argv) {
