@@ -39,9 +39,9 @@
 
 
 ##@@##defaultGroup
-#10.207.0.202   cdn.leju.com
 #10.207.0.209   cdn2.leju.com
 #10.207.0.201   cdn1.leju.com
 #10.207.0.203   cdn3.leju.com
 7.0.0.1   cdn345.leju.com
+10.207.0.202   cdn.leju.com
 ##@@##
