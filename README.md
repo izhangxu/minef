@@ -51,7 +51,7 @@
 
 把开发环境的文件/文件夹移动到生成环境目录，并且通过svn发布
     
- `minef release -m 'update'` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef release -m 'update'
+ `minef release -m 'update'` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef release abc/ app.js -m 'update'
  
 ### minef hosts(minef h)
 
