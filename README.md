@@ -11,6 +11,9 @@
 #### 文件/文件夹覆盖至线上
 * 移动开发环境文件至正式环境路径
 
+#### 文件发布
+* 发布文件或文件夹到线上（svn）
+
 #### 切换环境
 * 设置不同hosts组适应多个项目
 * 切换开发环境hosts至正式环境
@@ -43,6 +46,12 @@
 把开发环境的文件/文件夹复制（覆盖）到生产环境的文件目录。
     
  `minef copy -d` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef c -d
+ 
+### minef release(minef r)
+
+把开发环境的文件/文件夹移动到生成环境目录，并且通过svn发布
+    
+ `minef release -m 'update'` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef release -m 'update'
  
 ### minef hosts(minef h)
 
