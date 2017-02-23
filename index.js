@@ -1,7 +1,7 @@
 const mainf = require('./lib/minef.js');
 
 module.exports = {
-	init: function(argv) {
+	init: (argv) => {
 		mainf.init(argv);
 	}
-}; 
+};
