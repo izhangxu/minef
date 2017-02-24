@@ -86,4 +86,4 @@
 
 `minef server -p` 修改http服务监听的端口（默认8080）
 
-`minef server -o` 启动http服务并且自动打开浏览器
+`minef server -o` 启动http服务并且自动打开浏览器（默认true）
