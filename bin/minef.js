@@ -125,6 +125,32 @@ const handleArgv = (command, yargs) => {
 			.help()
 			.argv;
 	}
+	if (command === 'server') {
+		out = yargs
+			.usage('Usage: $0 server [options]')
+			.options({
+				'p': {
+					alias: 'port',
+					describe: '改变监听端口（默认是8080）',
+					type: 'string'
+				},
+				'o': {
+					alias: 'open',
+					default: true,
+					describe: '服务器启动后打开浏览器',
+					type: 'boolean'
+				},
+				'i': {
+					alias: 'autoindex',
+					default: false,
+					describe: '处理请求时显示默认页面（index.html）',
+					type: 'boolean'
+				}
+			})
+			.example('Usage: $0 server -p 3000')
+			.help()
+			.argv;
+	}
 	if (out.help) {
 		return yargs.showHelp();
 	}
@@ -146,7 +172,7 @@ if (!module.parent) {
 
 	let argv = yargs.argv;
 	let command = argv._[0];
-	let valid = ['config', 'init', 'release', 'copy', 'hosts'];
+	let valid = ['config', 'init', 'release', 'copy', 'hosts', 'server'];
 
 	if (valid.indexOf(command) > -1) {
 		handleArgv(command, yargs.reset());
