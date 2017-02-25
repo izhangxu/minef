@@ -1,0 +1,96 @@
+{
+	"config": {
+		"t": {
+			"alias": "test",
+			"describe": "测试线路径",
+			"type": "string"
+		},
+		"o": {
+			"alias": "online",
+			"describe": "正式线路径",
+			"type": "string"
+		},
+		"a": {
+			"alias": "all",
+			"describe": "显示所有配置",
+			"type": "boolean"	
+		}
+	},
+	"server": {
+		"p": {
+			"alias": "port",
+			"describe": "改变监听端口（默认是8080）",
+			"type": "string"
+		},
+		"o": {
+			"alias": "open",
+			"default": true,
+			"describe": "服务器启动后打开浏览器",
+			"type": "boolean"
+		},
+		"i": {
+			"alias": "autoindex",
+			"default": false,
+			"describe": "处理请求时显示默认页面（index.html）",
+			"type": "boolean"
+		},
+		"s": {
+			"alias": "silent",
+			"default": false,
+			"describe": "打印日志",
+			"type": "boolean"
+		}
+	},
+	"hosts": {
+		"t": {
+			"alias": "test",
+			"describe": "切换到测试线",
+			"type": "boolean"
+		},
+		"o": {
+			"alias": "online",
+			"describe": "切换到正式线",
+			"type": "boolean"
+		},
+		"R": {
+			"alias": "remove-group",
+			"describe": "移除一组host",
+			"type": "array"
+		},
+		"D": {
+			"alias": "disable-group",
+			"describe": "禁用一组host",
+			"type": "array"
+		},
+		"A": {
+			"alias": "active-group",
+			"describe": "禁用一组host",
+			"type": "array"
+		},
+		"r": {
+			"alias": "remove",
+			"describe": "移除一条host",
+			"type": "array"
+		},
+		"d": {
+			"alias": "disable",
+			"describe": "禁用一条host",
+			"type": "array"
+		},
+		"a": {
+			"alias": "active",
+			"describe": "激活一条host",
+			"type": "array"
+		},
+		"s": {
+			"alias": "set",
+			"describe": "设置一条host",
+			"type": "array"
+		},
+		"l": {
+			"alias": "list",
+			"describe": "显示设置的所有hosts",
+			"type": "boolean"
+		}
+	}
+}

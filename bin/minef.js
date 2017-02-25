@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const pkg = require('../package.json');
+const commandOptions = require('../lib/cli/commandOptions.json');
 // const utils = require('./utils');
 
 // 引用模块
@@ -13,22 +14,7 @@ const handleArgv = (command, yargs) => {
 	if (command === 'config') {
 		out = yargs
 			.usage('Usage: $0 config [options]')
-			.options({
-				't': {
-					alias: 'test',
-					describe: '测试线路径',
-					type: 'string'
-				},
-				'o': {
-					alias: 'online',
-					describe: '正式线路径',
-					type: 'string'
-				},
-				'a': {
-					alias: 'all',
-					describe: '显示所有配置',
-				}
-			})
+			.options(commandOptions.config)
 			.example("$0 config -t '/leju_203/trunk' -o /cdn_online/trunk")
 			.help()
 			.argv;
@@ -68,58 +54,7 @@ const handleArgv = (command, yargs) => {
 	if (command === 'hosts') {
 		out = yargs
 			.usage('Usage: $0 hosts [options]')
-			.options({
-				't': {
-					alias: 'test',
-					describe: '切换到测试线',
-					type: 'boolean'
-				},
-				'o': {
-					alias: 'online',
-					describe: '切换到正式线',
-					type: 'boolean'
-				},
-				'R': {
-					alias: 'remove-group',
-					describe: '移除一组host',
-					type: 'array'
-				},
-				'D': {
-					alias: 'disable-group',
-					describe: '禁用一组host',
-					type: 'array'
-				},
-				'A': {
-					alias: 'active-group',
-					describe: '禁用一组host',
-					type: 'array'
-				},
-				'r': {
-					alias: 'remove',
-					describe: '移除一条host',
-					type: 'array'
-				},
-				'd': {
-					alias: 'disable',
-					describe: '禁用一条host',
-					type: 'array'
-				},
-				'a': {
-					alias: 'active',
-					describe: '激活一条host',
-					type: 'array'
-				},
-				's': {
-					alias: 'set',
-					describe: '设置一条host',
-					type: 'array'
-				},
-				'l': {
-					alias: 'list',
-					describe: '显示设置的所有hosts',
-					type: 'boolean'
-				}
-			})
+			.options(commandOptions.hosts)
 			.example('Usage: $0 hosts -s cdn.leju.com 192.168.1.192')
 			.example('Usage: $0 hosts -r cdn.leju.com 192.168.1.192  groupName')
 			.help()
@@ -128,25 +63,7 @@ const handleArgv = (command, yargs) => {
 	if (command === 'server') {
 		out = yargs
 			.usage('Usage: $0 server [options]')
-			.options({
-				'p': {
-					alias: 'port',
-					describe: '改变监听端口（默认是8080）',
-					type: 'string'
-				},
-				'o': {
-					alias: 'open',
-					default: true,
-					describe: '服务器启动后打开浏览器',
-					type: 'boolean'
-				},
-				'i': {
-					alias: 'autoindex',
-					default: false,
-					describe: '处理请求时显示默认页面（index.html）',
-					type: 'boolean'
-				}
-			})
+			.options(commandOptions.server)
 			.example('Usage: $0 server -p 3000')
 			.help()
 			.argv;
