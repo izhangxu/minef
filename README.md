@@ -70,11 +70,11 @@
         
 `-r`或`-remove`    在hosts文件中删除一条地址  e.g.: minef hosts -remove cdn.leju.com 192.168.192.1 {group: "abc"}
         
-`-A`或`-activeGroup`    在hosts文件中激活一组地址  e.g.: minef hosts --active-group abc
+`-A`或`--active-group`    在hosts文件中激活一组地址  e.g.: minef hosts --active-group abc
         
-`-D`或`-disableGroup`    在hosts文件中禁用一组地址  e.g.: minef hosts --disable-group abc
+`-D`或`--disable-group`    在hosts文件中禁用一组地址  e.g.: minef hosts --disable-group abc
         
-`-R`或`-removeGroup`    在hosts文件中删除一组地址  e.g.: minef hosts --delete-group abc
+`-R`或`--delete-group`    在hosts文件中删除一组地址  e.g.: minef hosts --delete-group abc
 
 `-l`或`-list`    显示hosts  e.g.: minef hosts -l
 
