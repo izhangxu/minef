@@ -111,7 +111,12 @@
 		},
 		"q": {
 			"alias": "quality",
-			"describe": "压缩质量（1-100，默认70）",
+			"describe": "jpg,jpeg压缩质量（1-100，默认70）",
+			"type": "number"
+		},
+		"l": {
+			"alias": "level",
+			"describe": "png压缩质量（1-100，默认70）",
 			"type": "number"
 		},
 		"c": {
