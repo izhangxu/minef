@@ -21,6 +21,9 @@
 #### 静态服务器
 * 开启本地静态服务器
 
+#### 图片压缩（gif,jpg,png,jpeg）
+* 单个图片压缩
+* 整个文件目录里的图片压缩
 
 ## 安装
 
@@ -40,23 +43,23 @@
 	
 生成一个配置文件，其中包含开发环境和生产环境的文件路径(svn或git路径)、想要配置的hosts地址...   e.g.: minef config
 
-### `minef init(minef i)`
+### `minef init`
 
 `i`或`init` 初始化一个文件目录，包含js,assets,css,html,widget文件夹及config.json文件  e.g.: minef init page
 
-### `minef copy(minef c)`
+### `minef copy`
 
 把开发环境的文件/文件夹复制（覆盖）到生产环境的文件目录。
 
 `minef copy -d` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef c -d
  
-### `minef release(minef r)`
+### `minef release`
 
 把开发环境的文件/文件夹移动到生成环境目录，并且通过svn发布
     
  `minef release -m 'update'` 把开发环境下当前文件夹复制（覆盖）到生产环境  e.g.: minef release abc/ app.js -m 'update'
  
-### `minef hosts(minef h)`
+### `minef hosts`
 
 修改hosts文件，添加任意的一个或一组hosts地址。在hosts中添加后后会有类似下面的区块
 
@@ -78,7 +81,7 @@
 
 `-l`或`-list`    显示hosts  e.g.: minef hosts -l
 
-### `minef server(minef h)`
+### `minef server`
 
 启动http服务
 
@@ -87,3 +90,19 @@
 `minef server -p` 修改http服务监听的端口（默认8080）
 
 `minef server -o` 启动http服务并且自动打开浏览器（默认true）
+
+### `minef imagemin`
+
+图片压缩
+
+`-i`或`-input` 待压缩文件或文件夹路径（必传）
+
+`-o`或`-output` 输出文件夹路径（不传则命名上加_out e.g.: index_out.js /public_out）
+
+`-f`或`-focus` 强制替换文件或文件夹（默认false）
+
+`-q`或`-quality` jpg,jpeg压缩质量（1-100，默认70）
+
+`-l`或`-level` png压缩质量（1-100，默认70）
+
+`-c`或`-colors` gif压缩质量（2-256，默认70）

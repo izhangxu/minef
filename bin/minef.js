@@ -3,7 +3,13 @@
 const pkg = require('../package.json');
 const commandOptions = require('../lib/cli/commandOptions.json');
 // const utils = require('./utils');
-
+/*const config_path = {
+	path: {
+		test: '/Users/zhangxu/Documents/work/cdn/leju_203/cdn.ljimg.com/trunk',
+		online: '/Users/zhangxu/Documents/work/cdn_online/trunk'
+	}
+};
+*/
 // 引用模块
 const handleCli = (opts) => {
 	return require('../lib/cli/' + opts.input[0])(opts);
@@ -68,6 +74,15 @@ const handleArgv = (command, yargs) => {
 			.help()
 			.argv;
 	}
+	if (command === 'imagemin') {
+		out = yargs
+			.usage('Usage: $0 imagemin [options]')
+			.options(commandOptions.imagemin)
+			.demandOption('i')
+			.example('Usage: $0 imagemin -i 123.png -o 123_1.png')
+			.help()
+			.argv;
+	}
 	if (out.help) {
 		return yargs.showHelp();
 	}
@@ -89,7 +104,7 @@ if (!module.parent) {
 
 	let argv = yargs.argv;
 	let command = argv._[0];
-	let valid = ['config', 'init', 'release', 'copy', 'hosts', 'server'];
+	let valid = ['config', 'init', 'release', 'copy', 'hosts', 'server', 'imagemin'];
 
 	if (valid.indexOf(command) > -1) {
 		handleArgv(command, yargs.reset());

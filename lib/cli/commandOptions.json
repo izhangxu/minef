@@ -92,5 +92,32 @@
 			"describe": "显示设置的所有hosts",
 			"type": "boolean"
 		}
+	},
+	"imagemin": {
+		"i": {
+			"alias": "input",
+			"describe": "输入文件或文件夹路径",
+			"type": "string"
+		},
+		"o": {
+			"alias": "output",
+			"describe": "输出文件夹路径（不传则命名上加'_out' e.g. index_out.js /public_out）",
+			"type": "string"
+		},
+		"f": {
+			"alias": "focus",
+			"describe": "强制替换文件或文件夹",
+			"type": "boolean"
+		},
+		"q": {
+			"alias": "quality",
+			"describe": "压缩质量（1-100，默认70）",
+			"type": "number"
+		},
+		"c": {
+			"alias": "colors",
+			"describe": "gif压缩质量（2-256，默认70）",
+			"type": "number"
+		}
 	}
 }
