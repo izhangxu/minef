@@ -101,7 +101,7 @@
 		},
 		"o": {
 			"alias": "output",
-			"describe": "输出文件夹路径（不传则命名上加'_out' e.g. index_out.js /public_out）",
+			"describe": "输出文件夹路径（不传则命名上加'_out' e.g. index_out.js /public_out），输入相对路径",
 			"type": "string"
 		},
 		"f": {
