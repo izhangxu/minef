@@ -99,6 +99,8 @@ if (!module.parent) {
 		.command('copy', '将文件从开发环境目录复制到生成环境目录')
 		.command('release', '将文件从开发环境目录发布到生成环境目录（svn）')
 		.command('hosts', '修改hosts文件')
+		.command('server', '启动文件服务器')
+		.command('imagemin', '图片压缩')
 		.version(() => pkg.version)
 		.epilogue("查看使用文档，输入 minef <command> --help\neg: $0 init --help");
 
