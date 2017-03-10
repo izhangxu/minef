@@ -74,6 +74,14 @@ const handleArgv = (command, yargs) => {
 			.help()
 			.argv;
 	}
+	if (command === 'proxy') {
+		out = yargs
+			.usage('Usage: $0 proxy [options]')
+			.options(commandOptions.proxy)
+			.example('Usage: $0 proxy -online')
+			.help()
+			.argv;
+	}
 	if (command === 'imagemin') {
 		out = yargs
 			.usage('Usage: $0 imagemin [options]')
@@ -100,13 +108,14 @@ if (!module.parent) {
 		.command('release', '将文件从开发环境目录发布到生成环境目录（svn）')
 		.command('hosts', '修改hosts文件')
 		.command('server', '启动文件服务器')
+		.command('proxy', '代理文件到各个环境（方便调试，快速切换环境）')
 		.command('imagemin', '图片压缩')
 		.version(() => pkg.version)
 		.epilogue("查看使用文档，输入 minef <command> --help\neg: $0 init --help");
 
 	let argv = yargs.argv;
 	let command = argv._[0];
-	let valid = ['config', 'init', 'release', 'copy', 'hosts', 'server', 'imagemin'];
+	let valid = ['config', 'init', 'release', 'copy', 'hosts', 'server', 'proxy', 'imagemin'];
 
 	if (valid.indexOf(command) > -1) {
 		handleArgv(command, yargs.reset());

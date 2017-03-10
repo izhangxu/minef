@@ -39,6 +39,28 @@
 			"default": false,
 			"describe": "打印日志",
 			"type": "boolean"
+		},
+		"P": {
+			"alias": "proxy",
+			"describe": "代理到其他网络",
+			"type": "string"
+		}
+	},
+	"proxy": {
+		"l": {
+			"alias": "local",
+			"describe": "代理到本地",
+			"type": "boolean"
+		},
+		"t": {
+			"alias": "test",
+			"describe": "代理到测试环境",
+			"type": "boolean"
+		},
+		"o": {
+			"alias": "online",
+			"describe": "代理到正式环境",
+			"type": "boolean"
 		}
 	},
 	"hosts": {
