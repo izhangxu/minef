@@ -18,6 +18,10 @@
 * 设置不同hosts组适应多个项目
 * 切换开发环境hosts至正式环境
 
+#### 代理开发环境
+* 代理到不同开发环境（本地，测试线，线上）
+* 支持代理到gulp|webpack等工具开启的服务器地址，方便本地调试代码
+
 #### 静态服务器
 * 开启本地静态服务器
 
@@ -85,11 +89,21 @@
 
 启动http服务
 
-`minef server -i` 启动http服务并且打开默认的index.html（默认false）
+`-i`或`-autoindex` 启动http服务并且打开默认的index.html（默认false）
 
-`minef server -p` 修改http服务监听的端口（默认8080）
+`-p`或`-port` 修改http服务监听的端口（默认8080）
 
-`minef server -o` 启动http服务并且自动打开浏览器（默认true）
+`-o`或`-open` 启动http服务并且自动打开浏览器（默认true）
+
+### `sudo minef proxy`
+
+代理http服务。将需要代理的域名绑定host（例如：cdn.lemeng.com 127.0.0.1），然后在代码根目录启动命令（例如正使用的链接为 http://cdn.lemeng.com/abc/def/js/index.js ，则需要在cdn.lemeng.com/目录下启动命令）
+
+`-l`或者`-local` 代理到本地
+
+`-t`或`-test` 代理到测试线（域名在config.js中配置）
+
+`-o`或`-online` 代理到正式线（域名在config.js中配置）
 
 ### `minef imagemin`
 
